@@ -1,0 +1,33 @@
+import React from "react";
+
+function NumericKeypad({ onInput, onBackspace, onSubmit }) {
+  const keys = [
+    ["1", "2", "3"],
+    ["4", "5", "6"],
+    ["7", "8", "9"],
+    ["⌫", "0", "✅"],
+  ];
+
+  return (
+    <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50 grid grid-cols-3 gap-2 w-[180px] bg-gray-300 p-4 rounded-lg shadow-lg">
+      {keys.flat().map((key) => (
+        <button
+          key={key}
+          onClick={() => {
+            if (key === "⌫") onBackspace();
+            else if (key === "✅") onSubmit();
+            else onInput(key);
+          }}
+          className={`w-full h-12 text-xl font-semibold bg-gray-100 rounded-md shadow-md transition 
+            ${key === "✅" ? "bg-green-500 text-white hover:bg-green-600" : ""}
+            ${key === "⌫" ? "bg-red-500 text-white hover:bg-red-600" : ""}
+            ${key !== "✅" && key !== "⌫" ? "hover:bg-gray-200 active:bg-gray-400" : ""}`}
+        >
+          {key}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+export default NumericKeypad;
