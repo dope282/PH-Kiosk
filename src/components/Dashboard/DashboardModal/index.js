@@ -1,5 +1,4 @@
 import React from "react";
-import Menu from "../../Menu";
 import { useNavigate } from "react-router-dom";
 const DashboardModal = ({onClose}) => {
     const navigate = useNavigate();
@@ -9,14 +8,12 @@ const DashboardModal = ({onClose}) => {
         onClose();
     }
     return (
-        <div className="bg-cyan-200">
-            <form>
-            <h2>#ХОРООЛОЛ САЛБАР</h2>
-            <button onClick={() => handleSelection("dashboard")}>ЗАХИАЛГЫН БАРАА</button>
+        <div className="fixed h-screen w-screen bottom-0 left-0 transform -translate-x-0 z-50 flex items-center justify-center bg-white">
+            <form className="w-3/4 flex flex-col justify-between">
+            <h2 className="flex justify-start items-start">#ХОРООЛОЛ САЛБАР</h2>
+            <button onClick={() => handleSelection("order/arrived")}>ЗАХИАЛГЫН БАРАА</button>
             <br/>
-            <button onClick={() => handleSelection("dashboard")}>БЭЛЭН БАРАА</button>
-            <br/>
-            <button onClick={() => handleSelection("dashboard")} > Үргэлжлүүлэх</button>
+            <button onClick={() => handleSelection("ready/playhouse")}>БЭЛЭН БАРАА</button>
             </form>
         </div>
     )

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
+.btn-teal {
+    @apply inline-block bg-gray-300 hover:bg-gray-400 p-2 cursor-pointer 
+}
+.btn-teal:active {
+    @apply active:bg-teal-600 active:hover:bg-teal-700 active:text-white
+}
 @tailwind utilities;

@@ -25,15 +25,15 @@ function PasswordRecovery ({ onClose })  {
       };
   
   return (
-    <div className="modal-overlay">
+    <div className="fixed h-screen w-screen z-40 bottom-0 left-0 translate-x-0 bg-white flex justify-center items-center">
       <form onSubmit={handleSubmit} className="modal-content">
-        <span className="close" onClick={onClose}>X</span>
-        <h2>ПИН КОД СЭРГЭЭХ</h2>
+        <span className="cursor-pointer" onClick={onClose}>X</span>
+        <h2 className="cursor-default">ПИН КОД СЭРГЭЭХ</h2>
 
-        <label>УТАСНЫ ДУГААР:</label>
+        <label className="block">УТАСНЫ ДУГААР:</label>
         <input type="text"  value={phone}  onFocus={() => setActiveField("phone")}   readOnly placeholder="Утасны дугаар оруулна уу"  />
 
-        <button className="submit">Нууц үг сэргээх</button>
+        <button className="w-full text-white bg-teal-600 rounded-lg h-10 hover:bg-teal-700">Нууц үг сэргээх</button>
       </form>
       {activeField && (
                 <NumericKeypad onInput={handleInput} onBackspace={handleBackspace} onSubmit={() => setActiveField(null)} />

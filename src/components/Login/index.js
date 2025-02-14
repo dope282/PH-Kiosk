@@ -71,7 +71,7 @@ function Login({ onLogin }) {
             </div>
           </div>
           <div className="flex items-end">
-              <button type="submit" className="w-full font-normal py-2 md:h-28 md:text-4xl md text-white bg-teal-600 rounded-2xl hover:bg-teal-700">Нэвтрэх</button>
+              <button type="submit" className="w-full font-normal py-2 xl:h-28 xl:text-4xl xl text-white bg-teal-600 rounded-2xl hover:bg-teal-700">Нэвтрэх</button>
           </div>
           
         </form>
