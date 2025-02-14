@@ -3,7 +3,7 @@ import { useState } from "react";
 import OrderState from "../OrdersPage/OrderState";
 
 const products = [
-    { id: 1, name: "Costco Coffee", status: "Ирсэн бараа" },
+    { id: 1, name: "Costco Coffee", status: "Хүлээж авсан" },
     { id: 2, name: "Playhouse Set", status: "Хүлээгдэж буй" },
     { id: 3, name: "Freshfood Pack", status: "Ирсэн бараа" },
     { id: 4, name: "Apple Juice", status: "Хүлээж авсан" },
@@ -23,10 +23,7 @@ const Product = () => {
 
     return (
         <div className="p-4">
-      {/* Цэс хэсэг */}
       <OrderState selectedTab={selectedTab} onSelectTab={setSelectedTab} />
-
-      {/* Бүтээгдэхүүн жагсаалт */}
       <div className="mt-4">
         {filteredProducts.length > 0 ? (
           <ul className="grid grid-cols-3 gap-2">
@@ -41,16 +38,6 @@ const Product = () => {
         )}
       </div>
     </div>
-        // <div>
-        //     <div>costco</div>
-        //     <div>playhouse</div>
-        //     <div>freshfood</div>
-        //     <div>Ирсэн бараа</div>
-        //     <div>Хүлээгдэж буй</div>
-        //     <div>Хүлээж авсан</div>
-        //     <div>Цуцалсан</div>
-        //     <div>Захиалын дугаар</div>
-        // </div>
     )
 }
 

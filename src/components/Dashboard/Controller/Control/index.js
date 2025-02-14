@@ -1,7 +1,6 @@
 import React from "react";
-// import css from "./style.module.css";
 import { useNavigate } from "react-router-dom";
-const Controll= (props) => {
+const Controll= () => {
     const navigate = useNavigate();
     
     return (

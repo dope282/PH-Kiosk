@@ -4,8 +4,6 @@ import NumericKeypad from "./NumKeyPad";
 import logo from "../../assets/logo.png";
 import PasswordRecovery from "./PasswordRecovery";
 import DashboardModal from "../Dashboard/DashboardModal";
-import Dashboard from "../Dashboard";
-// import Alert from "../Alert";
 function Login({ onLogin }) {
     const [phone, setPhone] = useState("");
     const [pin, setPin] = useState("");
