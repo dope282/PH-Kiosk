@@ -1,15 +1,14 @@
 import React from "react";
 import ReadyOrdered from "../Toolbar";
-import Controll from "../Controller/Control";
-import BasketIcon from "./Basket";
-import ReadyProduct from "../ReadyProduct";
+import BasketIcon from "./Basket/BasketIcon";
+import ReadyProduct from "./ReadyProduct";
+import background from "../../../assets/background.png";
 const ReadyPage = () => {
     return (
-        <div>
+        <div style={{backgroundImage: `url(${background})`}} className="bg-cover bg-center w-screen h-screen">
+        <BasketIcon/>
             <ReadyOrdered/>
-            <BasketIcon/>
             <ReadyProduct/>
-            <Controll/>
         </div>
     )
 }

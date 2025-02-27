@@ -1,13 +1,15 @@
 import React from "react";
 import ReadyOrdered from "../Toolbar";
 import Controll from "../Controller/Control";
-import Product from "../OrderProduct";
+import Product from "./OrderProduct";
+import { ProductProvider } from "../Products/ProductContext/ProductContext";
+import background from "../../../assets/background.png";
 const OrdersPage = () => {
     return (
-        <div>
+        <div style={{ backgroundImage: `url(${background})` }} className="bg-cover bg-center w-screen h-screen ">
             <ReadyOrdered/>
-            <Product/>
-            <Controll/>
+                <Product/>
+                <Controll/>
         </div>
     )
 }

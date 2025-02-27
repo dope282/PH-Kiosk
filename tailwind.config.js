@@ -5,7 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      colors: {
+        primary: {
+          DEFAULT: '#138EB0',
+          hover: '#0F7994',
+          active: '#0C6179',
+        },
+      },
     },
     
   },
