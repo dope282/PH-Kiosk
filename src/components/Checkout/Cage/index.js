@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ProductContext } from "../../Dashboard/Products/ProductContext/ProductContext";
 import cage from "../../../assets/cage.jpg";
 import box from "../../../assets/box.jpg";
 
 const Cage = () => {
-    const location = useLocation();
     const { totalPrice, setTotalPrice, bagCount, setBagCount, boxCount, setBoxCount } = useContext(ProductContext);
     const navigate = useNavigate();
 

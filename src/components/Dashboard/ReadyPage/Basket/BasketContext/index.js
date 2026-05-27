@@ -4,7 +4,7 @@ const BasketContext = createContext();
 
 export const BasketProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [originalStock, setOriginalStock] = useState([]); 
+  const [, setOriginalStock] = useState([]);
   const [cartCount, setCartCount] = useState(0); 
 
   useEffect(() => {

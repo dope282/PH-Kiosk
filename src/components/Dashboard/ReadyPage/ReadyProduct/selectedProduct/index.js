@@ -12,7 +12,7 @@ const SelectedProduct = ({ product, onClose, otherProducts = [] }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
   const totalPages = Math.ceil(otherProductList.length / itemsPerPage);
-  const { addToCart, removeFromCart, cart } = useCart();
+  const { addToCart, cart } = useCart();
 
   const startX = useRef(0);
   const scrollLeft = useRef(0);
@@ -118,23 +118,6 @@ const handleAddToCart = () => {
 
 
 
-const handleRemoveFromCart = (productId) => {
-  const productToRemove = cart.find(item => item.id === productId);
-  if (productToRemove) {
-    removeFromCart(productId);
-
-    setSelectedProduct(prevProduct => ({
-      ...prevProduct,
-      quantity: prevProduct.quantity + productToRemove.quantity,
-    }));
-
-    setOtherProductList(prevList =>
-      prevList.map(item =>
-        item.id === productId ? { ...item, quantity: item.quantity + productToRemove.quantity } : item
-      )
-    );
-  }
-};
   const handleColorChange = (e) => {
     setSelectedProduct((prevProduct) => ({
       ...prevProduct,
@@ -226,7 +209,7 @@ const handleRemoveFromCart = (productId) => {
                 className="p-2 bg-white rounded cursor-pointer hover:bg-gray-200 transition lg:flex lg:flex-col lg:flex-wrap lg:object-cover lg:h-1/3 lg:shadow-lg lg:border-4"
                 onClick={() => handleProductSelect(otherProduct)}
               >
-                <img src={otherProduct.img} className="w-full h-24 object-cover lg:h-4/6 lg:p-2 lg:shadow-lg" />
+                <img src={otherProduct.img} alt={otherProduct.name} className="w-full h-24 object-cover lg:h-4/6 lg:p-2 lg:shadow-lg" />
                 <p className="lg:text-xl lg:text-gray-800 lg:h-1/6 lg:flex lg:items-center">{otherProduct.name}</p>
                 {otherProduct.price && <p className="text-gray-700 font-semibold lg:h-1/6 lg:flex lg:items-center">{otherProduct.price.toLocaleString()}₮</p>}
               </div>

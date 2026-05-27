@@ -75,9 +75,9 @@ function Login({ onLogin }) {
                     {error.pin && <p className="text-red-500 text-base md:text-lg lg:text-3xl lg: mt-4">Пин код буруу байна</p>}
 
                     <div className="lg:mt-8">
-                        <a href="#" onClick={() => setIsModalOpen(true)} className="border-b-2 border-primary my-8 text-base md:text-lg lg:text-4xl text-gray-700 ">
+                        <button type="button" onClick={() => setIsModalOpen(true)} className="border-b-2 border-primary my-8 text-base md:text-lg lg:text-4xl text-gray-700 ">
                             ПИН КОД СЭРГЭЭХ
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div className="flex items-end">

@@ -8,7 +8,7 @@ const Checkout = () => {
     const { totalPrice } = useContext(ProductContext);
     const navigate = useNavigate();
     const [selectedPayment, setSelectedPayment] = useState(null);
-    const [selectedUserType, setSelectedUserType] = useState(null);
+    const [selectedUserType] = useState(null);
     const [error, setError] = useState("");
 
     const handlePaymentSelection = (method) => {
@@ -47,7 +47,7 @@ const Checkout = () => {
                 <div className="h-1/2 flex flex-col gap-4">
                     <div className={`cursor-pointer ${selectedPayment === "bank" ? "font-bold text-primary" : "text-gray-500"} flex h-1/2 justify-center`}>
                         <div className="w-5/6 flex justify-end bg-white rounded-lg m-2">
-                            <img src={cart} className="h-full px-2" />
+                            <img src={cart} className="h-full px-2" alt="" />
                             <span 
                                 className={`w-full flex justify-center items-center lg:px-5 text-center`}
                                 onClick={() => handlePaymentSelection("bank")}
@@ -58,7 +58,7 @@ const Checkout = () => {
                     </div>
                     <div className={`cursor-pointer ${selectedPayment === "qpay" ? "font-bold text-primary" : "text-gray-500"} flex h-1/2 justify-center`}>
                         <div className="w-5/6 flex justify-end bg-white rounded-lg m-2">
-                            <img src={qpay} className="h-full px-2" />
+                            <img src={qpay} className="h-full px-2" alt="" />
                             <span 
                                 className={`w-full flex justify-center items-center lg:px-5 text-center`}
                                 onClick={() => handlePaymentSelection("qpay")}

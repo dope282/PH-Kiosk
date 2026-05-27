@@ -22,12 +22,6 @@ const ReadyProduct = () => {
     }
   };
 
-  const handlePageChange = (newPage) => {
-    if (newPage >= 1 && newPage <= totalPages) {
-      setCurrentPage(newPage);
-    }
-  };
-
   return (
     <div className="h-3/4 text-base md:text-lg lg:text-3xl">
         <ReadyState selectedTab={selectedTab} onSelectTab={(tab) => {

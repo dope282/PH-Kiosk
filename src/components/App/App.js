@@ -1,5 +1,4 @@
 import "./App.css";
-import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "../Login";
 import ReadyPage from "../Dashboard/ReadyPage";
@@ -15,8 +14,6 @@ import OrderNumber from "../Checkout/OrderNumber";
 import { BasketProvider } from "../Dashboard/ReadyPage/Basket/BasketContext"; // 🛒 CartProvider нэмлээ
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  
   return (
     <ProductProvider>
       <BasketProvider> 

@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../BasketContext";
-import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 const BasketIcon = () => {
     const navigate = useNavigate();
     const { cartCount } = useCart();

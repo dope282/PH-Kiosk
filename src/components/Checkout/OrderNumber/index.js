@@ -15,7 +15,7 @@ const OrderNumber = () => {
                 <div className="flex justify-center lg:my-20">Таны өмнө 12 үйлчлүүлэгч байна</div>
                 <div className="flex justify-center items-center text-primary-hover lg:text-9xl lg:font-bold">#278</div>
                 <div className="flex justify-center">
-                    <img className="" src={details}/>
+                    <img className="" src={details} alt="" />
                 </div>
                 <div className="flex justify-center">
                     <button 
